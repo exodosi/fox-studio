@@ -1,0 +1,206 @@
+/* ریست اولیه و زمینه مشکی */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: #00ff88;
+  font-family: 'Vazirmatn', sans-serif; /* فونتی سازگار فارسی/انگلیسی */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* پنهان کردن المان‌ها */
+.hidden {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* تصویر روباه */
+#foxImage {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+/* متن Fox Studio */
+#studioText {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #00ff88;
+}
+
+/* دکمه پنجه */
+#enterButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  animation: pulse 1.5s infinite alternate;
+}
+
+#enterButton img {
+  width: 80px;
+  filter: drop-shadow(0 0 10px #00ff88);
+}
+
+/* افکت پالس نئون */
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); filter: drop-shadow(0 0 20px #00ff88); }
+}
+/* سبک صفحه اصلی */
+.home-page {
+  background-color: #000;
+  color: #00ffcc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* عنوان صفحه */
+.home-title {
+  font-size: 2.2em;
+  margin-top: 20px;
+  text-align: center;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+/* دکمه‌های نئونی */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.neon-button {
+  text-decoration: none;
+  padding: 15px 40px;
+  border: 2px solid #00ffcc;
+  border-radius: 15px;
+  color: #00ffcc;
+  font-size: 1.1em;
+  background-color: transparent;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+.neon-button:hover {
+  background-color: #00ffcc;
+  color: black;
+  box-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+}
+/* صفحه گالری */
+.gallery-page {
+  background-color: black;
+  color: #00ffcc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.gallery-title {
+  font-size: 2em;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.gallery-container img {
+  width: 250px;
+  height: auto;
+  border: 2px solid #00ffcc;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00ffcc;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #00ffcc;
+}
+
+/* دکمه بازگشت */
+.back-button {
+  margin-top: 40px;
+  text-decoration: none;
+  padding: 10px 25px;
+  border: 2px solid #00ffcc;
+  color: #00ffcc;
+  border-radius: 10px;
+  transition: all 0.3s;
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+.back-button:hover {
+  background-color: #00ffcc;
+  color: black;
+  box-shadow: 0 0 20px #00ffcc;
+}
+/* صفحه ارتباط با ما */
+.contact-page {
+  background-color: black;
+  color: #00ffcc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2em;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+.contact-info p {
+  font-size: 1.2em;
+  margin: 15px 0;
+  text-shadow: 0 0 5px #00ffcc;
+}
+
+.contact-info span {
+  font-weight: bold;
+  color: #00ffaa;
+}
+/* واکنش‌گرا کردن تصاویر گالری */
+.gallery-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* واکنش‌گرا کردن کل صفحه برای موبایل */
+@media (max-width: 768px) {
+  .home-title,
+  .gallery-title,
+  .contact-title {
+    font-size: 1.6em;
+    text-align: center;
+  }
+
+  .neon-button {
+    font-size: 1em;
+    padding: 12px 20px;
+  }
+
+  .contact-info p {
+    font-size: 1em;
+  }
+
+  .gallery-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
